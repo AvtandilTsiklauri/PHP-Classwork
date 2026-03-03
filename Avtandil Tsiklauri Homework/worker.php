@@ -46,7 +46,7 @@ if (isset($_GET['saxeli'])) {
 
     echo "<h1 style='text-align:center;'>შედეგი</h1>";
 
-    echo "<table>";
+    echo "<table style='width:80%; margin:auto; border:2px solid #333; border-collapse: collapse; text-align:center; font-family:Arial;'>";
     echo "<tr><th>მონაცემი</th><th>მნიშვნელობა</th></tr>";
     echo "<tr><td>სახელი</td><td>" . $_GET['saxeli'] . "</td></tr>";
     echo "<tr><td>გვარი</td><td>" . $_GET['gvari'] . "</td></tr>";
