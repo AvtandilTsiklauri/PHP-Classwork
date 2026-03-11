@@ -1,0 +1,13 @@
+form{
+    width: 700px;
+    margin: auto;
+    border: solid 1px black;
+    padding: 15px;
+}
+.Result {
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: solid 2px black;
+    
+}
