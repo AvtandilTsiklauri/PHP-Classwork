@@ -14,7 +14,7 @@
 <body>
 
 <nav>
-    <div class="nav-logo">GamingPortal</div>
+    <a href="index.php" class="nav-logo">GamingPortal</a>
     <div class="nav-links">
         <?php if(isset($_SESSION['user_id'])){ ?>
             <?php if($_SESSION['role'] == 'admin'){ ?>
@@ -49,7 +49,7 @@
         <div class="post-card">
             <img src="uploads/<?php echo $post['image']; ?>" alt="<?php echo $post['title']; ?>">
             <div class="post-info">
-                <span class="category"><?php echo $post['category_name']; ?></span>
+                <a href="category.php?id=<?php echo $post['category_id']; ?>" class="category"><?php echo $post['category_name']; ?></a>
                 <h3><?php echo $post['title']; ?></h3>
                 <p><?php echo substr($post['description'], 0, 100); ?>...</p>
                 <div class="post-meta">
@@ -63,6 +63,8 @@
 
     </div>
 </div>
-
+    <footer>
+        <p>GamingPortal © 2025 — <a href="contact.php">Contact Us</a></p>
+    </footer>
 </body>
 </html>

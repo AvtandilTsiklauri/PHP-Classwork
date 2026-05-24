@@ -8,6 +8,9 @@ body {
     font-family: Arial;
     background: #f0f0f0;
     color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -23,6 +26,7 @@ nav {
     font-size: 20px;
     font-weight: bold;
     color: white;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -57,6 +61,8 @@ nav {
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
+    flex: 1;
+    width: 100%;
 }
 
 .posts-grid {
@@ -172,4 +178,151 @@ nav {
     align-items: center;
     margin-top: 30px;
     flex-wrap: wrap;
+}
+
+.comments-section {
+    padding: 25px;
+    border-top: 1px solid #eee;
+}
+
+.comments-section h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.comment-box {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+}
+
+.comment-author {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.comment-text {
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+    padding-left: 5px;
+}
+
+.comments-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comments-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    height: 100px;
+    resize: vertical;
+    font-family: Arial;
+    font-size: 14px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.comments-section button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    width: fit-content;
+}
+
+.comments-section button:hover {
+    background: #333;
+}
+
+.no-comments {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.login-to-comment {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.login-to-comment a {
+    color: #111;
+    font-weight: bold;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.comment-pfp {
+    width: 32px;
+    height: 32px;
+    background: #111;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.comment-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.comment-actions a {
+    font-size: 12px;
+    color: #888;
+    text-decoration: none;
+}
+
+.comment-actions a:hover {
+    color: #c00;
+}
+
+.category-title {
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+a.category {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: auto;
+    font-size: 13px;
+    color: #888;
+}
+
+footer a {
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
