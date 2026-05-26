@@ -81,7 +81,7 @@
 
         <h2>Add Post</h2>
 
-        Title:
+        <label>Title:</label>
         <input type="text" name="title">
         <?php if($title_err){ ?>
             <p class="error"><?php echo $title_err; ?></p>
@@ -89,7 +89,7 @@
 
         <br>
 
-        Description:
+        <label>Description:</label>
         <textarea name="description"></textarea>
         <?php if($description_err){ ?>
             <p class="error"><?php echo $description_err; ?></p>
@@ -97,7 +97,7 @@
 
         <br>
 
-        Category:
+        <label>Category:</label>
         <select name="category_id">
             <option value="">Choose Category</option>
             <?php foreach($categories as $cat){ ?>
@@ -112,7 +112,7 @@
 
         <br>
 
-        Image:
+        <label>Image:</label>
         <input type="file" name="image">
         <?php if($image_err){ ?>
             <p class="error"><?php echo $image_err; ?></p>

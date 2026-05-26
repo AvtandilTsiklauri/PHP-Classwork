@@ -72,7 +72,7 @@
 
         <h2>Edit Post</h2>
 
-        Title:
+        <label>Title:</label>
         <input type="text" name="title" value="<?php echo $post['title']; ?>">
         <?php if($title_err){ ?>
             <p class="error"><?php echo $title_err; ?></p>
@@ -80,7 +80,7 @@
 
         <br>
 
-        Description:
+        <label>Description:</label>
         <textarea name="description"><?php echo $post['description']; ?></textarea>
         <?php if($description_err){ ?>
             <p class="error"><?php echo $description_err; ?></p>
@@ -88,7 +88,7 @@
 
         <br>
 
-        Category:
+        <label>Category:</label>
         <select name="category_id">
             <option value="">Choose Category</option>
             <?php foreach($categories as $cat){ ?>

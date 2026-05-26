@@ -57,7 +57,7 @@
         <p class="success"><?php echo $success; ?></p>
     <?php } ?>
 
-    Name:
+    <label>Name:</label>
     <input type="text" name="name">
     <?php if($name_err){ ?>
         <p class="error"><?php echo $name_err; ?></p>
@@ -65,7 +65,7 @@
 
     <br>
 
-    Email:
+    <label>Email:</label>
     <input type="text" name="email">
     <?php if($email_err){ ?>
         <p class="error"><?php echo $email_err; ?></p>
@@ -73,7 +73,7 @@
 
     <br>
 
-    Message:
+    <label>Message:</label>
     <textarea name="message" style="width:100%; height:120px; padding:10px; border:1px solid #ccc; border-radius:6px; font-family:Arial; font-size:14px; outline:none; box-sizing:border-box; resize:vertical;"></textarea>
     <?php if($message_err){ ?>
         <p class="error"><?php echo $message_err; ?></p>
