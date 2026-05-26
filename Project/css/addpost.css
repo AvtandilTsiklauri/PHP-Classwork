@@ -1,69 +1,102 @@
-body{
-    font-family: Arial;
-    background: linear-gradient(135deg, #ece9e6, #ffffff);
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #111;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-form{
-    width: 480px;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+form {
+    width: 520px;
+    background: #1a1a1a;
+    padding: 35px;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    border-top: 3px solid #ff3355;
 }
 
-h2{
+h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+form > *:not(input):not(select):not(textarea):not(button):not(.error):not(br) {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 input[type="text"],
 input[type="file"],
 select,
-textarea{
+textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 10px 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 5px;
     outline: none;
     box-sizing: border-box;
+    color: #fff;
     font-family: Arial;
+    font-size: 14px;
 }
 
-textarea{
+input:focus, select:focus, textarea:focus {
+    border-color: #ff3355;
+}
+
+select option {
+    background: #1a1a1a;
+}
+
+textarea {
     height: 150px;
     resize: vertical;
 }
 
-input[type="file"]{
-    padding: 6px;
+input[type="file"] {
     cursor: pointer;
+    color: #aaa;
 }
 
-button{
+button {
     width: 100%;
     padding: 12px;
-    background: black;
-    color: white;
+    background: #ff3355;
+    color: #fff;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 5px;
 }
 
-button:hover{
-    background: #333;
+button:hover {
+    background: #e0002a;
 }
 
 .error {
-    color: #c00;
+    color: #ff3355;
     font-size: 12px;
     margin: -10px 0 10px 0;
+    font-weight: bold;
 }

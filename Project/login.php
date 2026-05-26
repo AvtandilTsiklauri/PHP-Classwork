@@ -66,7 +66,7 @@
         <p class="error"><?php echo $login_err; ?></p>
     <?php } ?>
 
-    Username:
+    <label>Username:</label>
     <input type="text" name="username">
     <?php if($username_err){ ?>
         <p class="error"><?php echo $username_err; ?></p>
@@ -74,7 +74,7 @@
 
     <br>
 
-    Password:
+    <label>Password:</label>
     <input type="password" name="password">
     <?php if($password_err){ ?>
         <p class="error"><?php echo $password_err; ?></p>

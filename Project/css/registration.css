@@ -1,85 +1,147 @@
-body{
-    font-family: Arial;
-    background: linear-gradient(135deg, #ece9e6, #ffffff);
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #111;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-form{
-    width: 380px;
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+form {
+    width: 400px;
+    background: #1a1a1a;
+    padding: 35px;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    border-top: 3px solid #ff3355;
 }
 
-h2{
+h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-input, select{
+form > *:not(input):not(select):not(button):not(.gender):not(.error):not(.success):not(br):not(p) {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input, select {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 10px 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 5px;
     outline: none;
     box-sizing: border-box;
+    color: #fff;
+    font-family: Arial;
+    font-size: 14px;
 }
 
-input[type="radio"]{
+input:focus, select:focus {
+    border-color: #ff3355;
+}
+
+select option {
+    background: #1a1a1a;
+}
+
+input[type="radio"] {
     width: auto;
     padding: 0;
     margin: 0;
-    vertical-align: middle;
+    accent-color: #ff3355;
 }
 
-button{
+button {
     width: 100%;
     padding: 12px;
-    background: black;
-    color: white;
+    background: #ff3355;
+    color: #fff;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 10px;
 }
 
-button:hover{
-    background: #333;
+button:hover {
+    background: #e0002a;
 }
 
-.gender{
+.gender {
     margin-bottom: 15px;
-    display: flex;       
+    display: flex;
     gap: 20px;
 }
 
-.gender label{
-    display: flex;        
+.gender label {
+    display: flex;
     align-items: center;
     gap: 6px;
     cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
 }
 
 .error {
-    color: #c00;
+    color: #ff3355;
     font-size: 12px;
     margin: -10px 0 10px 0;
+    font-weight: bold;
 }
 
 .success {
-    background: #efe;
-    border: 1px solid #cfc;
-    border-radius: 6px;
-    padding: 10px 15px;
+    background: rgba(255, 51, 85, 0.1);
+    border: 1px solid #ff3355;
+    border-radius: 5px;
+    padding: 10px 14px;
     margin-bottom: 15px;
-    color: #060;
+    color: #ff3355;
     font-size: 13px;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+p a {
+    color: #ff3355;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
 }

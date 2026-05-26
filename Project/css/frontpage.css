@@ -6,27 +6,28 @@
 
 body {
     font-family: Arial;
-    background: #f0f0f0;
-    color: #222;
+    background: #111;
+    color: #ddd;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 nav {
-    background: #111;
-    color: white;
+    background: #1a1a1a;
+    border-bottom: 1px solid #2a2a2a;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav-logo {
+a.nav-logo, .nav-logo {
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: #ff3355;
     text-decoration: none;
+    letter-spacing: 1px;
 }
 
 .nav-links {
@@ -36,19 +37,21 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: #ddd;
     text-decoration: none;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    color: #ff3355;
 }
 
 .pfp {
     width: 36px;
     height: 36px;
-    background: #444;
+    background: #ff3355;
+    color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -72,10 +75,15 @@ nav {
 }
 
 .post-card {
-    background: white;
-    border-radius: 10px;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: border-color 0.2s;
+}
+
+.post-card:hover {
+    border-color: #ff3355;
 }
 
 .post-card img {
@@ -89,87 +97,115 @@ nav {
 }
 
 .category {
-    background: #111;
-    color: white;
+    background: rgba(255, 51, 85, 0.15);
+    color: #ff3355;
     font-size: 11px;
     padding: 3px 8px;
     border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.category {
+    text-decoration: none;
 }
 
 .post-info h3 {
     margin: 10px 0 8px;
     font-size: 16px;
+    color: #fff;
+    font-weight: bold;
 }
 
 .post-info p {
     font-size: 13px;
-    color: #666;
+    color: #888;
     margin-bottom: 10px;
 }
 
 .post-meta {
     font-size: 12px;
-    color: #999;
-    margin-bottom: 10px;
+    color: #666;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.post-meta strong {
+    color: #ddd;
 }
 
 .read-more {
     display: inline-block;
-    background: #111;
-    color: white;
+    background: #ff3355;
+    color: #fff;
     padding: 7px 14px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 13px;
+    font-weight: bold;
+    border: none;
 }
 
 .read-more:hover {
-    background: #333;
+    background: #e0002a;
 }
 
 .post-container {
     max-width: 800px;
     margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 0;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .post-container img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 8px;
+    display: block;
 }
 
 .post-full {
-    padding: 25px;
+    padding: 30px;
 }
 
 .post-full h1 {
     margin: 10px 0;
     font-size: 26px;
+    color: #fff;
+    font-weight: bold;
 }
 
 .post-description {
     font-size: 15px;
-    color: #444;
-    line-height: 1.7;
+    color: #aaa;
+    line-height: 1.8;
     margin-top: 15px;
+}
+
+.post-meta {
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
+}
+
+.post-meta strong {
+    color: #ddd;
 }
 
 .back {
     display: inline-block;
-    margin-top: 0;
-    color: #111;
+    color: #aaa;
     text-decoration: none;
     font-size: 14px;
     line-height: 35px;
+    font-weight: bold;
 }
 
 .back:hover {
-    text-decoration: underline;
+    color: #ff3355;
 }
 
 .post-actions {
@@ -181,31 +217,37 @@ nav {
 }
 
 .comments-section {
-    padding: 25px;
-    border-top: 1px solid #eee;
+    padding: 30px;
+    border-top: 1px solid #2a2a2a;
 }
 
 .comments-section h3 {
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .comment-box {
-    background: #f9f9f9;
-    border-radius: 8px;
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
     padding: 12px 15px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .comment-author {
     font-weight: bold;
     font-size: 13px;
     margin-bottom: 5px;
+    color: #fff;
 }
 
 .comment-text {
-    font-size: 14px;
-    color: #444;
+    font-size: 13px;
+    color: #aaa;
     margin: 0;
     padding-left: 5px;
 }
@@ -218,7 +260,7 @@ nav {
 .comments-section textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     border-radius: 6px;
     height: 100px;
     resize: vertical;
@@ -227,15 +269,21 @@ nav {
     margin-top: 20px;
     box-sizing: border-box;
     outline: none;
+    background: #111;
+    color: #fff;
+}
+
+.comments-section textarea:focus {
+    border-color: #ff3355;
 }
 
 .comments-section button {
     margin-top: 10px;
     padding: 10px 20px;
-    background: #111;
-    color: white;
+    background: #ff3355;
+    color: #fff;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     font-size: 14px;
@@ -243,11 +291,11 @@ nav {
 }
 
 .comments-section button:hover {
-    background: #333;
+    background: #e0002a;
 }
 
 .no-comments {
-    color: #888;
+    color: #666;
     font-size: 14px;
     margin-bottom: 20px;
 }
@@ -255,12 +303,14 @@ nav {
 .login-to-comment {
     margin-top: 20px;
     font-size: 14px;
-    color: #666;
+    color: #aaa;
+    font-weight: bold;
 }
 
 .login-to-comment a {
-    color: #111;
+    color: #ff3355;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .comment-header {
@@ -273,8 +323,8 @@ nav {
 .comment-pfp {
     width: 32px;
     height: 32px;
-    background: #111;
-    color: white;
+    background: #ff3355;
+    color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -292,21 +342,19 @@ nav {
 
 .comment-actions a {
     font-size: 12px;
-    color: #888;
+    color: #666;
     text-decoration: none;
 }
 
 .comment-actions a:hover {
-    color: #c00;
+    color: #ff3355;
 }
 
 .category-title {
     margin-bottom: 25px;
     font-size: 22px;
-}
-
-a.category {
-    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
 }
 
 footer {
@@ -314,11 +362,12 @@ footer {
     padding: 25px;
     margin-top: auto;
     font-size: 13px;
-    color: #888;
+    color: #666;
+    border-top: 1px solid #2a2a2a;
 }
 
 footer a {
-    color: #111;
+    color: #ff3355;
     text-decoration: none;
     font-weight: bold;
 }

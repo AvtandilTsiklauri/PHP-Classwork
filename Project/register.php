@@ -78,7 +78,7 @@
 
     <h2>Register</h2>
 
-    Username:
+    <label>Username:</label>
     <input type="text" name="username">
     <?php if($username_err){ ?>
         <p class="error"><?php echo $username_err; ?></p>
@@ -86,7 +86,7 @@
 
     <br>
 
-    Email:
+    <label>Email:</label>
     <input type="text" name="email">
     <?php if($email_err){ ?>
         <p class="error"><?php echo $email_err; ?></p>
@@ -94,7 +94,7 @@
 
     <br>
 
-    Password:
+    <label>Password:</label>
     <input type="password" name="password">
     <?php if($password_err){ ?>
         <p class="error"><?php echo $password_err; ?></p>
@@ -102,7 +102,7 @@
 
     <br>
 
-    Country:
+    <label>Country:</label>
     <select name="country">
         <option value="">Choose Country</option>
         <option value="Georgia">Georgia</option>
@@ -115,7 +115,7 @@
 
     <br>
 
-    Gender:
+    <label>Gender:</label>
     <div class="gender">
         <label>
             <input type="radio" name="gender" value="Male">
